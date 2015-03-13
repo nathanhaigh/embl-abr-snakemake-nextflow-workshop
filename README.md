@@ -1,4 +1,24 @@
-[![Build Status](https://travis-ci.org/BPA-CSIRO-Workshops/btp-workshop-ngs.png?branch=master)](https://travis-ci.org/BPA-CSIRO-Workshops/btp-workshop-ngs) [![DOI](https://zenodo.org/badge/6197/BPA-CSIRO-Workshops/ngs-handout.svg)](http://dx.doi.org/10.5281/zenodo.14078)
+[![Build Status](https://travis-ci.org/BPA-CSIRO-Workshops/btp-workshop-template.png?branch=master)](https://travis-ci.org/BPA-CSIRO-Workshops/btp-workshop-template)
+
+This repository provides a base template for creating a hands-on workshop module for use in the
+Bioinformatics Training Platform (BTP). These types of workshop modules are designed to be self
+contained. That is they contain all the required information to permit them to ne reused quickly
+and easily. They contain the following 4 major elements:
+
+ * Handout documentation written in LaTeX. These often included background information,
+   step-by-step excersises, questions and answers as well as bonus excecises for those who progress
+   rapidly.
+ * Metadata describing where the data sets, used in the above handout, can be retrieved and where
+   on the computer system they should be located.
+ * Metadata describing which tools are required for the above handout excercises, and how to
+   install them.
+ * Presentations for introducing concepts which will be explored in the handout excercises.
+
+You will find instructions below on how to use this template to build your own hands-on workshop
+module.
+
+
+
 
 Table of Contents
 =================
