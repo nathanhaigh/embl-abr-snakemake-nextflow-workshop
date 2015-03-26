@@ -1,37 +1,40 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [General Design/Layout](#general-designlayout)
+- [General Workflows](#general-workflows)
+  - [Resuing an Existing BTP Workshop](#resuing-an-existing-btp-workshop)
+  - [Cutting Your Own BTP Workshop from Existing Modules](#cutting-your-own-btp-workshop-from-existing-modules)
+  - [Cutting Your Own BTP Modules](#cutting-your-own-btp-modules)
+  - [Cutting Your Own BTP Workshop from Scratch](#cutting-your-own-btp-workshop-from-scratch)
+- [License](#license)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 This repository provides a minimalistic base template for creating a hands-on workshop
 following the framework set out in the Bioinformatics Training Platform (BTP).
 
-These types of workshop modules are designed to be self contained. That is they contain all the
-required information to permit trainers to reuse and repurpose them quickly and easily. They contain
-the following 4 major elements:
+General Design/Layout
+=====================
 
- * **Handout** - This often includes background information, step-by-step exercises, questions and
-   answers as well as bonus exercises for those who progress rapidly.
- * **Data sets** - This describes where to obtain the data sets, used in the handout exercises, and
-   where on the computer system they should be located.
- * **Tools** - This describes which tools are used in the handout exercises and how to install them.
- * **Presentations** - This is where you will find presentations for introducing concepts that are
-   explored in the handout exercises.
-
-You will find instructions below on how to use this base template to build your own hands-on
-workshop module in the BTP framework.
-
-Table of Contents
+General Workflows
 =================
-<!-- toc -->
 
 Resuing an Existing BTP Workshop
-================================
+--------------------------------
+TODO
 
 Cutting Your Own BTP Workshop from Existing Modules
-===================================================
+---------------------------------------------------
+TODO
 
 Cutting Your Own BTP Modules
-============================
+----------------------------
+TODO
 
 Cutting Your Own BTP Workshop from Scratch
-==========================================
-
+------------------------------------------
+TODO
 
 License
 =======
