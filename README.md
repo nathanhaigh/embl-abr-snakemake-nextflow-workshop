@@ -1,3 +1,9 @@
+This repository provides a minimalistic base template for creating a hands-on workshop
+following the framework set out in the Bioinformatics Training Platform (BTP). Below we have
+provided various entry-points, by way of workflows, to demonstrate the various ways in which you
+can utilise existing workshops and workshop modules. We also provide information on how to go about
+developing your own modules and workshops.
+
 Table of Contents
 =================
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
@@ -13,18 +19,24 @@ Table of Contents
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-This repository provides a minimalistic base template for creating a hands-on workshop
-following the framework set out in the Bioinformatics Training Platform (BTP).
+Prerequisites
+=============
 
-General Design/Layout
-=====================
+
 
 General Workflows
 =================
 
+
+
 Resuing an Existing BTP Workshop
 --------------------------------
-TODO
+The easiest way to get started is to use an existing Bioinformatics Training Platform (BTP)
+workshop. To see a list of current BTP workshops head over to:
+https://github.com/BPA-CSIRO-Workshops?query=btp-workshop-
+
+For the purpose of this example workflow we are going to use the [btp-workshop-ngs]
+(https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs) repository.
 
 Cutting Your Own BTP Workshop from Existing Modules
 ---------------------------------------------------
