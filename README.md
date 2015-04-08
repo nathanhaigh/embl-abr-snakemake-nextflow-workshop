@@ -9,17 +9,21 @@ Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [General Design/Layout](#general-designlayout)
+- [Prerequisites](#prerequisites)
 - [General Workflows](#general-workflows)
   - [Resuing an Existing BTP Workshop](#resuing-an-existing-btp-workshop)
   - [Cutting Your Own BTP Workshop from Existing Modules](#cutting-your-own-btp-workshop-from-existing-modules)
   - [Cutting Your Own BTP Modules](#cutting-your-own-btp-modules)
   - [Cutting Your Own BTP Workshop from Scratch](#cutting-your-own-btp-workshop-from-scratch)
+- [Advanced Workshop Customisations](#advanced-workshop-customisations)
+  - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
+  - [Customise the Handout Styling](#customise-the-handout-styling)
+  - [Use Travis-CI to automate PDF Building](#use-travis-ci-to-automate-pdf-building)
 - [License](#license)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Pre requisites
+Prerequisites
 =============
 We assume you are working on a Linux OS and have command line experience, or at least you're not
 scared by it! The commands provided in the [General Workflows](#general-workflows) sections have
@@ -91,6 +95,24 @@ TODO
 
 Cutting Your Own BTP Workshop from Scratch
 ------------------------------------------
+TODO
+
+Advanced Workshop Customisations
+================================
+Once you've got the hang of making basic modifications of existing workshops, you'll find there are
+other useful and interesting things you might like to customise. This section aims to guide you
+though some of these.
+
+Minting a DOI for your Workshop
+-------------------------------
+TODO
+
+Customise the Handout Styling
+-----------------------------
+TODO
+
+Use Travis-CI to automate PDF Building
+--------------------------------------
 TODO
 
 License
