@@ -21,22 +21,66 @@ Table of Contents
 
 Prerequisites
 =============
+We assume you are working on a Linux OS and have command line experience, or at least you're not
+scared by it! The commands provided in the [General Workflows](#general-workflows) sections have
+been written in bash for a 64-bit Ubuntu OS but should work on other Linux flavours with little
+modification.
 
+Here is a list of software prerequisites:
+
+- [hub](https://hub.github.com/): This tool provides command line access to GitHub so you can do
+    things like create and fork repositories on GitHub via the command line.
 
 
 General Workflows
 =================
 
-
-
 Resuing an Existing BTP Workshop
 --------------------------------
 The easiest way to get started is to use an existing Bioinformatics Training Platform (BTP)
-workshop. To see a list of current BTP workshops head over to:
+workshop. For the purpose of this example workflow we are going to use the [btp-workshop-ngs]
+(https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs) repository.
+
+To see a list of available BTP workshops head over to:
 https://github.com/BPA-CSIRO-Workshops?query=btp-workshop-
 
-For the purpose of this example workflow we are going to use the [btp-workshop-ngs]
-(https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs) repository.
+ 1. Clone the [btp-workshop-ngs](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs)
+ repository into a new repository on GitHub. We'll create a repository under our username called
+ `ngs-workshop_SYD-2015-05` so we know exactly to which workshop the repository pertains:
+
+```bash
+NEW_REPO_NAME='nathanhaigh/ngs-workshop_SYD-2015-05'
+NEW_REPO_DESC='NGS Workshop: Sydney May 2015'
+
+cd /tmp/test
+git clone --recursive "https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs.git" ngs-workshop_SYD-2015-05
+cd ngs-workshop_SYD-2015-05
+
+hub create -d "${NEW_REPO_DESC}" "${NEW_REPO_NAME}"
+git remote set-url origin git@github.com:nathanhaigh/ngs-workshop_SYD-2015-05.git
+git push
+```
+
+ 2. You should now customise the repository to reflect your workshop-specific details.
+   a. `README.md` - Travis and zenodo badges, workshop info content
+   b. `template.tex` - Modify `\setWorkshopTitle`, `\setWorkshopVenue`, `\setWorkshopDate` and
+   `\setWorkshopAuthor` to reflext the specific of your workshop. These will be placed into the
+   handout.
+   c. `010_trainers/` - Delete unnecessary trainer photos from `010_trainers/photos/` and add photos
+   of your own trainers instead. Modify `010_trainers/trainers.tex` to contain only yor own trainers
+   and use the photos you placed into `010_trainers/photos/` or used the `010_trainers/generic.jpg` 
+   image for camera-shy trainers.
+
+ 3. Build your trainee and trainer handout PDFs.
+
+```bash
+# Perform a 1-time install of a minimal tex-live so you have everything you need to build the PDFs
+# from the LaTeX source
+cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
+
+# Build the trainee_handout.pdf and trainer_handout.pdf
+PATH=/usr/local/texlive/bin/x86_64-linux:$PATH make
+```
 
 Cutting Your Own BTP Workshop from Existing Modules
 ---------------------------------------------------
