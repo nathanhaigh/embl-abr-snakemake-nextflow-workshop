@@ -101,16 +101,16 @@ cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
 PATH=/usr/local/texlive/bin/x86_64-linux:$PATH make
 ```
 
-Cutting Your Own BTP Workshop from Existing Modules
----------------------------------------------------
+Developing Your Own BTP Workshop from Existing Modules
+------------------------------------------------------
 TODO
 
-Cutting Your Own BTP Modules
-----------------------------
+Developing Your Own BTP Modules
+-------------------------------
 TODO
 
-Cutting Your Own BTP Workshop from Scratch
-------------------------------------------
+Developing Your Own BTP Workshop from Scratch
+---------------------------------------------
 TODO
 
 Advanced Workshop Customisations
