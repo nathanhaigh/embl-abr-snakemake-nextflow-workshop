@@ -210,7 +210,30 @@ though some of these.
 
 Minting a DOI for your Workshop
 -------------------------------
-TODO
+So, you've [developed your own BTP workshop](#developing-your-own-btp-workshop-from-scratch) and
+you want to get credit for all your hard work or you simply want to have a public record of a
+particular workshop so people can refer back to the content used. With a DOI, you can do just that.
+
+In order to generate a DOI for your workshop repository, you first need to login to a service
+external to GitHub, called [zenodo](https://zenodo.org/), and enable DOI generation for your
+workshop repository. Then, when you create a new "release" of your repository, zenodo will store a
+copy of the "release" for posterity and generate a DOI that will point to that copy held by zenodo.
+This means that even in the event that GitHub goes away, there will be a copy of your repository as
+it stood at the time you created the "release".
+
+  1. Login to the [zenodo](https://zenodo.org/) website using your GitHub account details.
+  2. Find the GitHub settings on zenodo; you should see a listing of all your GitHub repositories.
+  3. Flick the switch to "ON" next to the repository for which you what zenodo to create DOI's
+  whenever you make a "release" for that repository.
+  4. Head back over to the repository on GitHub and click "releases" in the header of the repository.
+  5. Click "Create a new release" and complete the form.
+  6. Once the "release" is made, zenodo will detect this and do it's thing. Head back to the
+  GitHub settings page on zenodo and you should find a DOI badge next to the workshop repository
+  name containing the DOI. If you click the badge, you will be provided with code for inclusion in
+  various file formats, including Markdown, HTML and a URL to an SVG image.
+
+Full details of this process can be found on the [citable code](https://guides.github.com/activities/citable-code/)
+GitHub help page.
 
 Customise the Handout Styling
 -----------------------------
