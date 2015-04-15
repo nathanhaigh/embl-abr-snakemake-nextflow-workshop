@@ -10,11 +10,15 @@ Table of Contents
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Prerequisites](#prerequisites)
+  - [Installing Hub](#installing-hub)
 - [General Workflows](#general-workflows)
   - [Resuing an Existing BTP Workshop](#resuing-an-existing-btp-workshop)
-  - [Cutting Your Own BTP Workshop from Existing Modules](#cutting-your-own-btp-workshop-from-existing-modules)
-  - [Cutting Your Own BTP Modules](#cutting-your-own-btp-modules)
-  - [Cutting Your Own BTP Workshop from Scratch](#cutting-your-own-btp-workshop-from-scratch)
+  - [Developing Your Own BTP Workshop from Existing Modules](#developing-your-own-btp-workshop-from-existing-modules)
+  - [Developing Your Own BTP Modules](#developing-your-own-btp-modules)
+  - [Developing Your Own BTP Workshop from Scratch](#developing-your-own-btp-workshop-from-scratch)
+- [Updating an Existing Workshop](#updating-an-existing-workshop)
+  - [Lock Down Write Access](#lock-down-write-access)
+  - [How To Provide Updates](#how-to-provide-updates)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
   - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
   - [Customise the Handout Styling](#customise-the-handout-styling)
