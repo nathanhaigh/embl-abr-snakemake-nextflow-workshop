@@ -35,6 +35,22 @@ Here is a list of software prerequisites:
 - [**hub**](https://hub.github.com/): This tool provides command line access to GitHub so you can do
     things like create and fork repositories on GitHub via the command line.
 
+Installing Hub
+--------------
+Download the latest release from https://github.com/github/hub/releases/latest. As at this time,
+the lastest version is v2.2.1 and we can download and install hub using the following commands:
+
+```bash
+# Set the version we want to install
+HUB_VERSION='2.2.1'
+cd /tmp
+# Download
+wget "https://github.com/github/hub/releases/download/v${HUB_VERSION}/hub-linux-amd64-${HUB_VERSION}.tar.gz"
+# Extract
+tar xzf "hub-linux-amd64-${HUB_VERSION}.tar.gz"
+# Copy the binary onto the path
+sudo cp "hub-linux-amd64-${HUB_VERSION}/hub" /usr/local/bin/
+```
 
 General Workflows
 =================
