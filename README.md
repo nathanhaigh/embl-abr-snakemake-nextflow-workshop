@@ -192,10 +192,15 @@ git push
 
 # Issue a pull request to have your changes included into the master workshop repository
 hub pull-request -m "Test pull request"
-
-# Now wait until someone with write access to the master workshop repository merges in
-# your changes or otherwise provides a comment on your proposed changes
 ```
+
+Now wait until someone with write access to the master workshop repository merges in your changes
+or otherwise provides a comment on your proposed changes.
+
+Once a decision has been made regarding your merge request, you can delete your fork of the
+repository. To do this, simply head over to the repository's settings page. For full details, see
+GitHub's [deleting a repository](https://help.github.com/articles/deleting-a-repository/) help
+page.
 
 Advanced Workshop Customisations
 ================================
