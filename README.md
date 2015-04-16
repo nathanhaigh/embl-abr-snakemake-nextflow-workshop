@@ -11,14 +11,18 @@ Table of Contents
 
 - [Prerequisites](#prerequisites)
   - [Installing Hub](#installing-hub)
+- [Basic Concpets](#basic-concpets)
+  - [Workshop Modules](#workshop-modules)
+  - [Workshops](#workshops)
+  - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
 - [General Workflows](#general-workflows)
   - [Resuing an Existing BTP Workshop](#resuing-an-existing-btp-workshop)
   - [Developing Your Own BTP Workshop from Existing Modules](#developing-your-own-btp-workshop-from-existing-modules)
   - [Developing Your Own BTP Modules](#developing-your-own-btp-modules)
   - [Developing Your Own BTP Workshop from Scratch](#developing-your-own-btp-workshop-from-scratch)
 - [Updating an Existing Workshop](#updating-an-existing-workshop)
-  - [Lock Down Write Access](#lock-down-write-access)
-  - [How To Provide Updates](#how-to-provide-updates)
+  - [Updating a Module](#updating-a-module)
+  - [Updating a Workshop](#updating-a-workshop)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
   - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
   - [Customise the Handout Styling](#customise-the-handout-styling)
@@ -56,8 +60,55 @@ tar xzf "hub-linux-amd64-${HUB_VERSION}.tar.gz"
 sudo cp "hub-linux-amd64-${HUB_VERSION}/hub" /usr/local/bin/
 ```
 
+Basic Concpets
+==============
+In order to help create a more reusable, plug-and-play like system for developing workshops we have
+a few key concepts which should be understood in order to get the most out of the BTP system.
+
+Workshop Modules
+----------------
+A workshop module is a major, self-contained component of a hands-on workshop. It can be reused,
+in a mix-and-match way, along with other modules to put together a new workshop. Each module has
+its own repository and contain all the required information for the teaching of that particular module's
+content. They contain, LaTeX source code for the handout, presentation matrials to help introduce
+concepts covered in the module as well as metadata describing the data and tools used in the
+module excercies.
+
+To start putting together your own workshop module, head over to the [btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)
+repositoriy for further details.
+
+Workshops
+---------
+Workshop repositories pull together 1 or more workshop modules and provide the necessary files to
+glue them together into a single coherent workshop. There are two types of workshops repositores:
+
+  1. An almost static workshop repository which captures the workshop which was run at a particular
+  location on a paticular date. Think of this as a snapshot of a workshop which was run and maintained
+  for posterity.
+  2. A master workshop template which is updated and maintained over time. Think of this as a
+  template from which the above static workshop repository is created.
+
+Fork and Pull Collaborative Model
+---------------------------------
+We will assume that you are using a [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull)
+to getting updates included into a workshop or workshop module. This means that the master
+repository of a workshop or module has limited GitHub users which have write access and can thus
+OK changes into a particular repository.
+
+To modify who has write access to your GitHub repository, head over to the repository's
+Settings >> Collaborators page. Whether the repository is under your personal space or an
+organisation will determine exactly how youmake these changes. For full details of both
+approaches, see the GitHub Help for
+[adding collaborators to a personal repository](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/)
+or [permission levels for an organisation repository](https://help.github.com/articles/permission-levels-for-an-organization-repository/).
+
+This provides a convienient way of controlling how changes are vetted before being included into a
+module or workshop. Choose wisely which users you give this power to.
+
 General Workflows
 =================
+The following workflows are to provide guidence on how to achieve particular tasks; from updating
+a workshop module to writing your own workshop from scratch.
 
 Resuing an Existing BTP Workshop
 --------------------------------
@@ -122,50 +173,80 @@ TODO
 
 Updating an Existing Workshop
 =============================
-Once you have created your own workshop repository, either by [reusing an existing workshop](#resuing-an-existing-btp-workshop)
-or by [developing your own BTP workshop from scratch](#developing-your-own-btp-workshop-from-scratch),
-there may come a time when you want to run another workshop of the same type. We will be setting up
-what GitHub calls the [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull).
+We will assume that you are using a [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull)
+to getting updates included into a repository. Even if you have write access to a repository, we
+advise that you resist making changes directly into the master repository or OK'ing your own
+updates. This ensures there are stricter quality controls and check on what changes are made to
+your master repositories.
 
+Since each workshop module is a seperate git repository, any updates to a workshop means first
+updating a workshop module.
 
-For this purpose we
-advise that you set up a repository which will act as the master template from which you will clone
-other repositories for running another workshop. We recommend following the same steps for cloning a workshop
-repository as detailed in [reusing an existing workshop](#resuing-an-existing-btp-workshop), except
-when it comes to naming the repository, you omit the location and date information from the
-repository name. This way you can easily distinguish your master workshop template repository,
-from the workshop repositories linked to a particular workshop on a particular date in a particular
-location.
+Updating a Module
+-----------------
+To demonstrate this workflow we will use the [btp-module-ngs-qc](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc)
+repository as the example.
 
-The master template repository may require updating over time as you will be cloning from it for
-running some future workshops. For the sake of simplisity, we assume you already have this
-repository in place and we will use the [btp-workshop-ngs](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs)
-repository as our example.
+We won't make changes directly in the [btp-module-ngs-qc](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc)
+repository because we either don't have permission or our policy doesn't allow it. Instead we will
+fork the repository, make our changes there and then [issue a pull request](https://help.github.com/articles/using-pull-requests/#initiating-the-pull-request)
 
-Lock Down Write Access
-----------------------
-Firstly, this repository will be your master copy of the workshop and will be cloned whenever you
-run a new workshop. You should provide a mechanism through which changes can be vetted before being
-allowed into your master workshop repository. Luckily, GitHub allows these things to be done easily.
+Lets take this one step at a time and use the command line where possible rather than using the
+GitHub website:
 
-The first thing to do is to add GitHub users who you trust and want to allow write access to this
-repository. Head over to the repository's Settings >> Collaborators page for this. Depending on
-whether the repository is under your personal space or an organisation will change how you add
-users with write permissions. For full details of both approaches, see the GitHub Help for [adding
-collaborators to a personal repository](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/)
-or [permission levels for an organisation repository](https://help.github.com/articles/permission-levels-for-an-organization-repository/).
+```bash
+# Create a local clone of the repository we want to fork
+cd /tmp
+git clone --recursive https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc.git
+cd btp-module-ngs-qc
 
-How To Provide Updates
-----------------------
-The GitHub way is to simply [fork the repository](https://help.github.com/articles/fork-a-repo/),
-on GitHub. You will then work on this repository for making your changes. Once those changes have
-been push up to the forked repository, you then need to
-[issue a pull request](https://help.github.com/articles/using-pull-requests/#initiating-the-pull-request)
-to get your modifications added into the original master workshop repository. Once the changes have
-been accepted, you can delete your fork of that repository.
+# Create the fork using hub
+hub fork
 
-So, lets take this one step at a time and use the command line where possible rather than using the
-GitHub website.
+# Make a change and commit it to your local repository
+touch test
+git add test
+git commit -m "Added test file"
+
+# Push it up to your repository on GitHub - replace <USER> with your own GitHub username
+git push --set-upstream <USER> master
+
+# Subsequent pushes will only need a "git push"
+touch test2
+git add test2
+git commit -m "Added test2 file"
+git push
+
+# Issue a pull request to request your changes be included into the module repository
+hub pull-request -m "Test pull request"
+```
+
+Now wait until someone with write access to the module repository has merged in your changes
+or otherwise provided a comment on your proposed changes. Once a decision has been made regarding
+your merge request, you can delete your fork of the repository. To do this, simply head over to the
+repository's settings page. For full details, see GitHub's
+[deleting a repository](https://help.github.com/articles/deleting-a-repository/) help page.
+
+To have an existing workshop repository utilise these updates you will need to update the workshop
+repository's git submodules. This is detailed in the [Updating a Workshop](#updating-a-workshop)
+section.
+
+Updating a Workshop
+-------------------
+A workshop is comprised of 1 or more modules which are included in the repository as git submodules.
+A submodule always points to a particular revision of the module repository; usually the revision
+when the module was added as a submodule to the workshop repsitory. As such, if a module gets
+updated the submodule is still pointing to the same (older) revision of the module repository. We
+need to update this if we want the workshop to use the new and improved updates that have been
+included in the module.
+
+We assume that some update(s) have been added to the [btp-module-ngs-qc](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc)
+module and we now want to have those changes reflected in the [btp-workshop-ngs](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs)
+workshop repository.
+
+Remember, we're not allowed to make changes directly in the master [btp-workshop-ngs](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs)
+repository. We either don't have permissions to do that ourself or we want someone else to check
+what we're doing! As such, we'll fork the workshop repository and issue a pull request.
 
 ```bash
 # Create a local clone of the repository we want to fork
@@ -176,31 +257,28 @@ cd btp-workshop-ngs
 # Create the fork using hub
 hub fork
 
-# Make a change and commit it to your local repository
-touch test
-git add test
-git commit -m "Added test file"
+# Update a git submodule so it points to the latest revision of the workshop module
+cd 050_ngs-qc
+git pull origin master
+cd ../
+git add 050_ngs-qc
+git commit -m "Updated QC submodule to latest revision"
 
-# Push it up to your repository on GitHub
+# Push it up to your repository on GitHub - replace <USER> with your own GitHub username
 git push --set-upstream <USER> master
 
-# Subsequent pushes will only need a "git push"
-touch test2
-git add test2
-git commit -m "Added test2 file"
+# Update all submodules so they all point to the latest revisions in their
+# respective repositories
+git submodule update --remote
+git add .
+git commit -m "Updated all submodule to their latest revisions"
+
+# Push it up to your repository on GitHub
 git push
 
-# Issue a pull request to have your changes included into the master workshop repository
-hub pull-request -m "Test pull request"
+# Issue a pull request to request your changes be included into the module repository
+hub pull-request -m "Updated all submodules to their latest revisions"
 ```
-
-Now wait until someone with write access to the master workshop repository merges in your changes
-or otherwise provides a comment on your proposed changes.
-
-Once a decision has been made regarding your merge request, you can delete your fork of the
-repository. To do this, simply head over to the repository's settings page. For full details, see
-GitHub's [deleting a repository](https://help.github.com/articles/deleting-a-repository/) help
-page.
 
 Advanced Workshop Customisations
 ================================
