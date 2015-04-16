@@ -165,7 +165,17 @@ TODO
 
 Developing Your Own BTP Modules
 -------------------------------
-TODO
+Head over to the [btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)
+repository. It contains all the information and example info on how to put together your own
+workshop module including:
+
+  1. How to setup the directory structure of the repository
+  2. How to write your handout content using LaTeX and our style file for achieving a consistent
+  document styling
+
+In the [example.tex](https://github.com/BPA-CSIRO-Workshops/btp-module-template/blob/master/handout/example.tex)
+file You'll find lots of useful info and links to online resources to help you on your way with
+writing LaTeX.
 
 Developing Your Own BTP Workshop from Scratch
 ---------------------------------------------
