@@ -161,7 +161,72 @@ PATH=/usr/local/texlive/bin/x86_64-linux:$PATH make
 
 Developing Your Own BTP Workshop from Existing Modules
 ------------------------------------------------------
-TODO
+We use the [btp-workshop-template](https://github.com/BPA-CSIRO-Workshops/btp-workshop-template)
+repository as a template from which to create our brand new workshop. Because we know that this
+new workshop will be in high demand, we'll set up and configure a master workshop repository. This
+will then be used to create static, workshop-specific repositories. Our new workshop will be an
+introduction to RNA-seq.
+
+We start by looking at what [existing BTP modules](https://github.com/BPA-CSIRO-Workshops?query=btp-module-)
+we might be able to reuse. Lets say we decide to only include the [btp-module-ngs-qc](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc) and
+[btp-module-rna-seq](https://github.com/BPA-CSIRO-Workshops/btp-module-rna-seq) modules.
+
+We first create a local clone of the [btp-workshop-template](https://github.com/BPA-CSIRO-Workshops/btp-workshop-template)
+repository, add the two workshop modules as git submodules, ...
+
+```bash
+# Lets specify a name for our workshop
+WORKSHOP_NAME='my_new_workshop'
+
+# Clone the workshop template as our starting place
+git clone --recursive git@github.com:BPA-CSIRO-Workshops/btp-workshop-template.git "${WORKSHOP_NAME}"
+cd "${WORKSHOP_NAME}"
+
+# Add the two workshop modules as git submodules
+# Use a number prefix to the submodules directories to indicate the order in workshop
+# The QC module will come first, followed by the RNA-Seq module, as designated by the 020
+# and 030 prefix. Note they come after 010_trainers and 020_preamble.
+git submodule add git@github.com:BPA-CSIRO-Workshops/btp-module-ngs-qc.git 020_qc
+git commit -m "Added the QC module"
+git submodule add git@github.com:BPA-CSIRO-Workshops/btp-module-rna-seq.git 030_rna-seq
+git commit -m "Added the RNA-Seq module"
+
+# Create the master workshop repository in your personal GitHub space using hub
+hub create -d "A description of my new workshop"
+
+# Update the origin remote of this local repository to point to our new master workshop
+# repository on GitHub and push our new workshop to it. Change <USER> for your GitHub username
+git remote set-url origin git@github.com:<USER>/${WORKSHOP_NAME}.git
+git push
+```
+
+Rather than starting your workshop from the [btp-workshop-template](https://github.com/BPA-CSIRO-Workshops/btp-workshop-template)
+repository, you could also use an existing [btp-workshop-](https://github.com/BPA-CSIRO-Workshops?query=btp-workshop-)
+and start modifying it from there. If you take this approach, you are more likely to want to
+remove workshop modules. You can do this very easily:
+
+```bash
+# Lets specify a name for our workshop
+WORKSHOP_NAME='my_new_workshop'
+
+# Clone the btp-workshop-ngs
+git clone --recursive git@github.com:BPA-CSIRO-Workshops/btp-workshop-ngs.git "${WORKSHOP_NAME}"
+cd "${WORKSHOP_NAME}"
+
+# Delete all but the QC and RNA-Seq submodules
+git rm 060_alignment
+git commit -m "Deleted 060_alignment submodule"
+git rm 070_chip-seq 090_velvet 905_post-workshop
+git commit -m "Deleted other submodules"
+
+# Create the master workshop repository in your personal GitHub space using hub
+hub create -d "A description of my new workshop"
+
+# Update the origin remote of this local repository to point to our new master workshop
+# repository on GitHub and push our new workshop to it. Change <USER> for your GitHub username
+git remote set-url origin git@github.com:<USER>/${WORKSHOP_NAME}.git
+git push
+```
 
 Developing Your Own BTP Modules
 -------------------------------
