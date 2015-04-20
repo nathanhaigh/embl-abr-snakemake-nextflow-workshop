@@ -11,12 +11,12 @@ Table of Contents
 
 - [Prerequisites](#prerequisites)
   - [Installing Hub](#installing-hub)
-- [Basic Concpets](#basic-concpets)
+- [Basic Concepts](#basic-concepts)
   - [Workshop Modules](#workshop-modules)
   - [Workshops](#workshops)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
 - [General Workflows](#general-workflows)
-  - [Resuing an Existing BTP Workshop](#resuing-an-existing-btp-workshop)
+  - [Reusing an Existing BTP Workshop](#reusing-an-existing-btp-workshop)
   - [Developing Your Own BTP Workshop from Existing Modules](#developing-your-own-btp-workshop-from-existing-modules)
   - [Developing Your Own BTP Modules](#developing-your-own-btp-modules)
   - [Developing Your Own BTP Workshop from Scratch](#developing-your-own-btp-workshop-from-scratch)
@@ -60,7 +60,7 @@ tar xzf "hub-linux-amd64-${HUB_VERSION}.tar.gz"
 sudo cp "hub-linux-amd64-${HUB_VERSION}/hub" /usr/local/bin/
 ```
 
-Basic Concpets
+Basic Concepts
 ==============
 In order to help create a more reusable, plug-and-play like system for developing workshops we have
 a few key concepts which should be understood in order to get the most out of the BTP system.
@@ -110,7 +110,7 @@ General Workflows
 The following workflows are to provide guidence on how to achieve particular tasks; from updating
 a workshop module to writing your own workshop from scratch.
 
-Resuing an Existing BTP Workshop
+Reusing an Existing BTP Workshop
 --------------------------------
 The easiest way to get started is to use an existing Bioinformatics Training Platform (BTP)
 workshop. These workshops are like a master template for a given workshop; they are cloned
