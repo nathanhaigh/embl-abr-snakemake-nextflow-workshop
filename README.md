@@ -20,9 +20,9 @@ Table of Contents
   - [Developing Your Own BTP Workshop from Existing Modules](#developing-your-own-btp-workshop-from-existing-modules)
   - [Developing Your Own BTP Modules](#developing-your-own-btp-modules)
   - [Developing Your Own BTP Workshop from Scratch](#developing-your-own-btp-workshop-from-scratch)
-- [Updating an Existing Workshop](#updating-an-existing-workshop)
-  - [Updating a Module](#updating-a-module)
-  - [Updating a Workshop](#updating-a-workshop)
+  - [Updating an Existing Workshop](#updating-an-existing-workshop)
+    - [Updating a Module](#updating-a-module)
+    - [Updating a Workshop](#updating-a-workshop)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
   - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
   - [Customise the Handout Styling](#customise-the-handout-styling)
@@ -247,7 +247,7 @@ Developing Your Own BTP Workshop from Scratch
 TODO
 
 Updating an Existing Workshop
-=============================
+-----------------------------
 We will assume that you are using a [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull)
 to getting updates included into a repository. Even if you have write access to a repository, we
 advise that you resist making changes directly into the master repository or OK'ing your own
@@ -257,8 +257,8 @@ your master repositories.
 Since each workshop module is a seperate git repository, any updates to a workshop means first
 updating a workshop module.
 
-Updating a Module
------------------
+### Updating a Module
+
 To demonstrate this workflow we will use the [btp-module-ngs-qc](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc)
 repository as the example.
 
@@ -306,8 +306,8 @@ To have an existing workshop repository utilise these updates you will need to u
 repository's git submodules. This is detailed in the [Updating a Workshop](#updating-a-workshop)
 section.
 
-Updating a Workshop
--------------------
+### Updating a Workshop
+
 A workshop is comprised of 1 or more modules which are included in the repository as git submodules.
 A submodule always points to a particular revision of the module repository; usually the revision
 when the module was added as a submodule to the workshop repsitory. As such, if a module gets
