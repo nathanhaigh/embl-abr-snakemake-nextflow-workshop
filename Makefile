@@ -17,6 +17,10 @@ trainee_output_files = $(addprefix trainee_, $(addsuffix .pdf, $(basename $(hand
 # "make" will invoke it.
 all: $(trainer_output_files) $(trainee_output_files)
 
+# Target for setting up the TeX Environment
+tex_env:
+	cd ./developers/ && sudo -E ./texlive_install.sh
+
 # CUSTOM BUILD RULES
 
 # In case you didn't know, '$@' is a variable holding the name of the target,
