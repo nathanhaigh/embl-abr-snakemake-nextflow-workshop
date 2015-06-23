@@ -411,9 +411,29 @@ environment and to check the building before pushing changes.
   2. We are able to catch LaTeX errors early while they are easier to debug.
   3. We can publish the resulting PDF to the repository's [GitHub Pages](https://pages.github.com/).
 
+### Configuring Travis-CI 
 All that is required is a a bit of configuration to get Travis-CI and your GitHub repository talking and a special
 `.travis.yml` file in the top level of your repository. This file is where you place instructions for Travis-CI to
-perform.
+perform. To enable Travis-CI to automate tasks associated with your GitHub-based LaTeX repository (I assume this already exists) we need to set up a few things first (full details at http://docs.travis-ci.com/user/getting-started/). These are:
+
+  1. Sign in to [Travis-CI](https://travis-ci.org/) using your GitHub account credentials and OK the permissions
+required by Travis-CI to access your GitHub account.
+  2. Enable your LaTeX project repository on your Travis-CI [profile page](https://travis-ci.org/profile). Once this
+is done, Travis-CI is then monitoring the repository for any commit activity.
+  3. Create a `.travis.yml` file in the root of your GitHub repository defining the tasks you want Travis-CI to
+perform each time a commit is made to your monitored repository.
+
+### Add a `.travis.yml` File to Your Repository
+Once you've enabled Travis-CI for your LaTeX repository, it's time to create that `.travis.yml` file which will tell
+Travis-CI what automated tasks to perform each time a commit is pushed to your repository. First, a little background:
+
+When Travis-CI detects a commit to your repository it first create a brand new, clean (vanilla) virtual machine (VM)
+called the [build environment](http://docs.travis-ci.com/user/ci-environment/) (by default: Ubuntu 12.04 LTS Server
+Edition 64bit). Next, Travis-CI clones your repository within that build environment and then runs the tasks defined
+in the `.travis.yml` file in the top level of your repository. Now, what do we need to add to the `.travis.yml` file to have Travis-CI perform:
+
+  1. Install TeX Live
+  2. Compile our LaTeX document
 
 License
 =======
