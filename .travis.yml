@@ -7,8 +7,8 @@ git:
   submodules: false
 before_install:
   - git submodule update --init --recursive
-before_script:
-  - cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
-script: make
+#before_script:
+#  - cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
+script: make tex_env all
 after_success:
   - if [[ "$TRAVIS_BRANCH" == "master" ]]; then bash ./developers/deploy-ghpages.sh; fi
