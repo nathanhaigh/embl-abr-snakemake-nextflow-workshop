@@ -44,7 +44,7 @@ tex_env:
 # missing file reference and interactively asking you for an alternative.
 
 $(handout_latex_files): template.tex $(MODULE_TEX_FILES)
-	sed -e '/^$/d' $(MODULE_SED_EXPRESSIONS) < template.tex > $@
+	sed -e '/^$$/d' $(MODULE_SED_EXPRESSIONS) < template.tex > $@
 
 trainee_%.pdf: %.tex
 	/bin/sed -i -e 's@^\\usepackage\[trainermanual\]{btp}@\\usepackage{btp}@' $<
