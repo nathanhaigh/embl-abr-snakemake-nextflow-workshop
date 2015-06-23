@@ -6,8 +6,9 @@ SHELL = bash
 
 handout_latex_files  = handout.tex
 
-MODULE_TEX_FILES = $(shell find ./*/handout/ -maxdepth 1 -type f -path '\./[0-9]*.tex' | sort -n)
-
+# Grab any tex files in 'handout' subdirectories and construct a sed command for adding them into
+# a copy of the template.tex file
+MODULE_TEX_FILES = $(shell find ./*/handout/ -maxdepth 1 -type f -path '\./[0-9]*.tex' 2> /dev/null | sort -n)
 MODULE_SED_EXPRESSIONS = $(addprefix -e '/^\\chapterstyle{module}/a \\\input{, $(addsuffix }', $(MODULE_TEX_FILES)))
 
 trainer_output_files = $(addprefix trainer_, $(addsuffix .pdf, $(basename $(handout_latex_files))))
@@ -42,8 +43,8 @@ tex_env:
 # -interactive=nonstopmode keeps the pdflatex backend from stopping at a
 # missing file reference and interactively asking you for an alternative.
 
-handout.tex: template.tex $(MODULE_TEX_FILES)
-	sed $(MODULE_SED_EXPRESSIONS) < template.tex > $@
+$(handout_latex_files): template.tex $(MODULE_TEX_FILES)
+	sed -e '/^$/d' $(MODULE_SED_EXPRESSIONS) < template.tex > $@
 
 trainee_%.pdf: %.tex
 	/bin/sed -i -e 's@^\\usepackage\[trainermanual\]{btp}@\\usepackage{btp}@' $<
