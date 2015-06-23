@@ -394,7 +394,26 @@ TODO
 
 Use Travis-CI to automate PDF Building
 --------------------------------------
-TODO
+IN PROGRESS
+
+Ideally, everyone who contributes LaTeX code to your module will test if the PDF can still be built from the source
+without error, before the change is comitted to the repository. This of course means that each collaborator has a
+working TeX environment such as [TeX Live](http://www.tug.org/texlive/) (multi-platform),
+[MiKTeX](http://www.miktex.org/) (MS Windows), [proTeXt](http://www.tug.org/protext/) (MS Windows) or
+[MacTeX](http://www.tug.org/mactex/) (Apple Mac). However, what if edits are performed online, the collaborator
+couldn't get a TeX environment installed easily simply forgets to test the build before committing their changes? As a
+result, you can find yourself with a LaTeX project which no longer compiles and debugging becomes time-consuming.
+
+The Travis Continuous Integration ([Travis-CI](https://travis-ci.org/)) system can be instructed to perform almost any automated task following a commit being pushed to a GitHub repository. By utilising Travis-CI we can:
+
+  1. Automate the PDF build process, thereby removing the requirement for all collaborators to have a working TeX
+environment and to check the building before pushing changes.
+  2. We are able to catch LaTeX errors early while they are easier to debug.
+  3. We can publish the resulting PDF to the repository's [GitHub Pages](https://pages.github.com/).
+
+All that is required is a a bit of configuration to get Travis-CI and your GitHub repository talking and a special
+`.travis.yml` file in the top level of your repository. This file is where you place instructions for Travis-CI to
+perform.
 
 License
 =======
