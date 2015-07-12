@@ -16,7 +16,8 @@ Table of Contents
   - [Workshops](#workshops)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
 - [General Workflows](#general-workflows)
-  - [Reusing an Existing BTP Workshop](#reusing-an-existing-btp-workshop)
+  - [Reusing an Existing BTP Workshop for Self-Directed Learning](#reusing-an-existing-btp-workshop-for-self-directed-learning)
+  - [Reusing an Existing BTP Workshop to Run Your Own Workshop](#reusing-an-existing-btp-workshop-to-run-your-own-workshop)
   - [Developing Your Own BTP Workshop from Existing Modules](#developing-your-own-btp-workshop-from-existing-modules)
   - [Developing Your Own BTP Modules](#developing-your-own-btp-modules)
   - [Developing Your Own BTP Workshop from Scratch](#developing-your-own-btp-workshop-from-scratch)
@@ -110,8 +111,12 @@ General Workflows
 The following workflows are to provide guidence on how to achieve particular tasks; from updating
 a workshop module to writing your own workshop from scratch.
 
-Reusing an Existing BTP Workshop
---------------------------------
+Reusing an Existing BTP Workshop for Self-Directed Learning
+-----------------------------------------------------------
+TODO
+
+Reusing an Existing BTP Workshop to Run Your Own Workshop
+---------------------------------------------------------
 The easiest way to get started is to use an existing Bioinformatics Training Platform (BTP)
 workshop. These workshops are like a master template for a given workshop; they are cloned
 in order to run a new workshop of the same kind and are maintained and updated over time.
