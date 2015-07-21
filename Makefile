@@ -8,7 +8,7 @@ handout_latex_files  = handout.tex
 
 # Grab any tex files in 'handout' subdirectories and construct a sed command for adding them into
 # a copy of the template.tex file
-MODULE_TEX_FILES = $(shell find ./*/handout/ -maxdepth 1 -type f -path '\./[0-9]*.tex' 2> /dev/null | sort -n)
+MODULE_TEX_FILES = $(shell find ./ -maxdepth 3 -type f -path '\./[0-9]*/handout/*.tex' 2> /dev/null | sort -n)
 MODULE_SED_EXPRESSIONS = $(addprefix -e '/^\\chapterstyle{module}/a \\\input{, $(addsuffix }', $(MODULE_TEX_FILES)))
 
 trainer_output_files = $(addprefix trainer_, $(addsuffix .pdf, $(basename $(handout_latex_files))))
