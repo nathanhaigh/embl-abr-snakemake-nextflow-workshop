@@ -9,13 +9,13 @@ Table of Contents
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Prerequisites](#prerequisites)
-  - [Installing Hub](#installing-hub)
-- [Basic Concepts](#basic-concepts)
+- [Basic BTP Concepts](#basic-btp-concepts)
   - [Workshop Modules](#workshop-modules)
   - [Workshops](#workshops)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
 - [General Workflows](#general-workflows)
+  - [Prerequisites](#prerequisites)
+    - [Installing Hub](#installing-hub)
   - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
   - [Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-2-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
   - [Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
@@ -32,37 +32,8 @@ Table of Contents
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Prerequisites
-=============
-We assume you are working on a Linux OS and have command line experience, or at least you're not
-scared by it! The commands provided in the [General Workflows](#general-workflows) sections have
-been written in bash for a 64-bit Ubuntu OS but should work on other Linux flavours with little
-modification.
-
-Here is a list of software prerequisites:
-
-- [**hub**](https://hub.github.com/): This tool provides command line access to GitHub so you can do
-    things like create and fork repositories on GitHub via the command line.
-
-Installing Hub
---------------
-Download the latest release from https://github.com/github/hub/releases/latest. As at this time,
-the lastest version is v2.2.1 and we can download and install hub using the following commands:
-
-```bash
-# Set the version we want to install
-HUB_VERSION='2.2.1'
-cd /tmp
-# Download
-wget "https://github.com/github/hub/releases/download/v${HUB_VERSION}/hub-linux-amd64-${HUB_VERSION}.tar.gz"
-# Extract
-tar xzf "hub-linux-amd64-${HUB_VERSION}.tar.gz"
-# Copy the binary onto the path
-sudo cp "hub-linux-amd64-${HUB_VERSION}/hub" /usr/local/bin/
-```
-
-Basic Concepts
-==============
+Basic BTP Concepts
+==================
 In order to help create a more reusable, plug-and-play like system for developing workshops we have
 a few key concepts which should be understood in order to get the most out of the BTP system.
 
@@ -110,7 +81,36 @@ module or workshop. Choose wisely which users you give this power to.
 General Workflows
 =================
 The following workflows are to provide guidence on how to achieve particular tasks; from updating
-a workshop module to writing your own workshop from scratch.
+a workshop module to writing your own workshop modules from scratch. There are some software
+prerequisits for following the examples under each workflow.
+
+Prerequisites
+-------------
+We assume you are working on a Linux OS and have command line experience, or at least you're not
+scared by it! The commands provided in the [General Workflows](#general-workflows) sections have
+been written in bash for a 64-bit Ubuntu OS but should work on other Linux flavours with little
+modification.
+
+Here is a list of software prerequisites:
+
+- [**hub**](https://hub.github.com/): This tool provides command line access to GitHub so you can do
+    things like create and fork repositories on GitHub via the command line.
+
+### Installing Hub
+Download the latest release from https://github.com/github/hub/releases/latest. We can download and
+install hub using the following commands:
+
+```bash
+# Set the version we want to install
+HUB_VERSION='2.2.1'
+cd /tmp
+# Download
+wget "https://github.com/github/hub/releases/download/v${HUB_VERSION}/hub-linux-amd64-${HUB_VERSION}.tar.gz"
+# Extract
+tar xzf "hub-linux-amd64-${HUB_VERSION}.tar.gz"
+# Copy the binary onto the path
+sudo cp "hub-linux-amd64-${HUB_VERSION}/hub" /usr/local/bin/
+```
 
 Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning
 -----------------------------------------------------------------------
