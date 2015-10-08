@@ -16,11 +16,12 @@ Table of Contents
   - [Workshops](#workshops)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
 - [General Workflows](#general-workflows)
-  - [Reusing an Existing BTP Workshop for Self-Directed Learning](#reusing-an-existing-btp-workshop-for-self-directed-learning)
-  - [Reusing an Existing BTP Workshop to Run Your Own Workshop](#reusing-an-existing-btp-workshop-to-run-your-own-workshop)
-  - [Developing Your Own BTP Workshop from Existing Modules](#developing-your-own-btp-workshop-from-existing-modules)
-  - [Developing Your Own BTP Modules](#developing-your-own-btp-modules)
-  - [Developing Your Own BTP Workshop from Scratch](#developing-your-own-btp-workshop-from-scratch)
+  - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
+  - [Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-2-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
+  - [Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
+  - [Workflow 4: Making Changes to an Existing BTP Module or Workshop](#workflow-4-making-changes-to-an-existing-btp-module-or-workshop)
+  - [Workflow 5: Developing Your Own BTP Module](#workflow-5-developing-your-own-btp-module)
+  - [Workflow 6: Developing Your Own BTP Workshop](#workflow-6-developing-your-own-btp-workshop)
   - [Updating an Existing Workshop](#updating-an-existing-workshop)
     - [Updating a Module](#updating-a-module)
     - [Updating a Workshop](#updating-a-workshop)
@@ -111,12 +112,12 @@ General Workflows
 The following workflows are to provide guidence on how to achieve particular tasks; from updating
 a workshop module to writing your own workshop from scratch.
 
-Reusing an Existing BTP Workshop for Self-Directed Learning
------------------------------------------------------------
+Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning
+-----------------------------------------------------------------------
 TODO
 
-Reusing an Existing BTP Workshop to Run Your Own Workshop
----------------------------------------------------------
+Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop
+---------------------------------------------------------------------
 The easiest way to get started is to use an existing Bioinformatics Training Platform (BTP)
 workshop. These workshops are like a master template for a given workshop; they are cloned
 in order to run a new workshop of the same kind and are maintained and updated over time.
@@ -164,8 +165,8 @@ cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
 PATH=/usr/local/texlive/bin/x86_64-linux:$PATH make
 ```
 
-Developing Your Own BTP Workshop from Existing Modules
-------------------------------------------------------
+Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop
+-------------------------------------------------------------------
 We use the [btp-workshop-template](https://github.com/BPA-CSIRO-Workshops/btp-workshop-template)
 repository as a template from which to create our brand new workshop. Because we know that this
 new workshop will be in high demand, we'll set up and configure a master workshop repository. This
@@ -247,8 +248,16 @@ In the [example.tex](https://github.com/BPA-CSIRO-Workshops/btp-module-template/
 file You'll find lots of useful info and links to online resources to help you on your way with
 writing LaTeX.
 
-Developing Your Own BTP Workshop from Scratch
----------------------------------------------
+Workflow 4: Making Changes to an Existing BTP Module or Workshop
+----------------------------------------------------------------
+TODO
+
+Workflow 5: Developing Your Own BTP Module
+------------------------------------------
+TODO
+
+Workflow 6: Developing Your Own BTP Workshop
+--------------------------------------------
 TODO
 
 Updating an Existing Workshop
