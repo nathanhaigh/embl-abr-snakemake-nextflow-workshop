@@ -21,7 +21,6 @@ Table of Contents
   - [Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
   - [Workflow 4: Making Changes to an Existing BTP Module or Workshop](#workflow-4-making-changes-to-an-existing-btp-module-or-workshop)
   - [Workflow 5: Developing Your Own BTP Module](#workflow-5-developing-your-own-btp-module)
-  - [Workflow 6: Developing Your Own BTP Workshop](#workflow-6-developing-your-own-btp-workshop)
   - [Updating an Existing Workshop](#updating-an-existing-workshop)
     - [Updating a Module](#updating-a-module)
     - [Updating a Workshop](#updating-a-workshop)
@@ -76,8 +75,9 @@ content. They contain, LaTeX source code for the handout, presentation matrials 
 concepts covered in the module as well as metadata describing the data and tools used in the
 module excercies.
 
-To start putting together your own workshop module, head over to the [btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)
-repositoriy for further details.
+If you are looking to develop your own workshop content within the BTP framework then most of the work
+is done at the module level in a module repository. A workshop (see below) repository simply acts as a
+kind of glue to bring 1 or more BTP modules together.
 
 Workshops
 ---------
@@ -254,11 +254,15 @@ TODO
 
 Workflow 5: Developing Your Own BTP Module
 ------------------------------------------
-TODO
+This is where you will spend most of your time in developing content for use in workshops. To be able to
+effectively develop new content, you will need to become familiar with the way BTP modules are structured
+and how they interface with a BTP workshop repository. All these details are provided in a template repository
+([btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)) which contains detailed
+information about the strucure of a BTP module, inline help and examples.
 
-Workflow 6: Developing Your Own BTP Workshop
---------------------------------------------
-TODO
+For the remaining of this workflow,we assume you are familiar with the BTP module design/structure.
+
+TODO: Add info of what to do, what to modify etc.
 
 Updating an Existing Workshop
 -----------------------------
