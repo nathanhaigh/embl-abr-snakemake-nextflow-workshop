@@ -13,7 +13,6 @@ Table of Contents
 - [BTP Components](#btp-components)
   - [Workshop Modules](#workshop-modules)
   - [Workshops](#workshops)
-  - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
 - [Workflow Prerequisites](#workflow-prerequisites)
 - [General Workflows](#general-workflows)
   - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
@@ -25,6 +24,7 @@ Table of Contents
     - [Specifying Tools Required for Your Module](#specifying-toolsirequired-for-your-module)
     - [Writing Your Handout Exercises](#writing-your-handout-exercises)
 - [Maintaining Workshop/Module Repositories](#maintaining-workshop_module_repositories)
+  - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
   - [Updating a Module](#updating-a-module)
   - [Updating a Workshop](#updating-a-workshop)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
@@ -72,23 +72,6 @@ types of workshops repositores:
      and is cloned whenever a trainer runs the workshop at a specific location on a particular date.
   2. A static, workshop repository, cloned from the above master workshop repository. It provides a
      convienient way to capture the state of a workshop at the time it was run. 
-
-Fork and Pull Collaborative Model
----------------------------------
-We will assume that you are using a [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull)
-to getting updates included into a workshop or workshop module. This means that the master
-repository of a workshop or module has limited GitHub users which have write access and can thus
-OK changes into a particular repository.
-
-To modify who has write access to your GitHub repository, head over to the repository's
-Settings >> Collaborators page. Whether the repository is under your personal space or an
-organisation will determine exactly how youmake these changes. For full details of both
-approaches, see the GitHub Help for
-[adding collaborators to a personal repository](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/)
-or [permission levels for an organisation repository](https://help.github.com/articles/permission-levels-for-an-organization-repository/).
-
-This provides a convienient way of controlling how changes are vetted before being included into a
-module or workshop. Choose wisely which users you give this power to.
 
 Workflow Prerequisites
 ======================
@@ -280,7 +263,7 @@ specify the public URL from which the dataset will be obtained. Other informatio
 pertain to where the data set should reside on the training platform (this should match what you write in your
 handout exercises), who should own the file(s) etc.
 
-More specific information can be found in the `[btp-module-template/datasets/README.md](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)`
+More specific information can be found in the [`btp-module-template/datasets/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)
 
 ### Specifying Tools Required for Your Module
 
@@ -288,7 +271,7 @@ You will need to create a `tools/tools.yaml` file in your workshop module. In th
 specify the public URL of a shell script to be used to install each of the required tools. "Providers" other than `shell` can be specified. For instance, if the tool has a Debian package, you can provide a link to the `.deb` file
 and specify the `provider` as `dpkg`.
 
-More specific information can be found in the `[btp-module-template/tools/README.md](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tools/README.md)`
+More specific information can be found in the [`btp-module-template/tools/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tools/README.md)
 
 ### Writing Your Handout Exercises
 
@@ -296,6 +279,23 @@ TODO
 
 Maintaining Workshop/Module Repositories
 ========================================
+
+Fork and Pull Collaborative Model
+---------------------------------
+We will assume that you are using a [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull)
+to getting updates included into a workshop or workshop module. This means that the master
+repository of a workshop or module has limited GitHub users which have write access and can thus
+OK changes into a particular repository.
+
+To modify who has write access to your GitHub repository, head over to the repository's
+Settings >> Collaborators page. Whether the repository is under your personal space or an
+organisation will determine exactly how youmake these changes. For full details of both
+approaches, see the GitHub Help for
+[adding collaborators to a personal repository](https://help.github.com/articles/adding-collaborators-to-a-personal-repository/)
+or [permission levels for an organisation repository](https://help.github.com/articles/permission-levels-for-an-organization-repository/).
+
+This provides a convienient way of controlling how changes are vetted before being included into a
+module or workshop. Choose wisely which users you give this power to!
 
 ## Updating a Module
 
