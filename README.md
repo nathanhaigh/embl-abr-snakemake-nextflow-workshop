@@ -23,6 +23,7 @@ Table of Contents
     - [Specifying Datasets Required for Your Module](#specifying-datasets-required-for-your-module)
     - [Specifying Tools Required for Your Module](#specifying-toolsirequired-for-your-module)
     - [Writing Your Handout Exercises](#writing-your-handout-exercises)
+  - [Workflow 6: Developing Your Own BTP Workshop From Scratch](#workflow-6-developing-your-own-btp-workshop-from-scratch)
 - [Maintaining Workshop/Module Repositories](#maintaining-workshop_module_repositories)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
   - [Updating a Module](#updating-a-module)
@@ -274,6 +275,11 @@ and specify the `provider` as `dpkg`.
 More specific information can be found in the [`btp-module-template/tools/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tools/README.md)
 
 ### Writing Your Handout Exercises
+
+TODO
+
+Workflow 6: Developing Your Own BTP Workshop From Scratch
+=========================================================
 
 TODO
 
