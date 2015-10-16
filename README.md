@@ -89,14 +89,14 @@ module or workshop. Choose wisely which users you give this power to.
 
 Workflow Prerequisites
 ======================
-To follow along with the exampples in the workflows, you'll need to install some software first.
+To follow along with the examples in the workflows, you'll need to install some software first.
 Here is a list of software prerequisites:
 
 - **git**: This tool allows you to use and interact with git repositories.
 - [**hub**](https://hub.github.com/): This tool provides command line access to GitHub so you can do
     things like create and fork repositories on GitHub via the command line.
 
-### Insatalling git
+### Installing git
 Simply install through the standard Ubuntu repositories:
 
 ```bash
