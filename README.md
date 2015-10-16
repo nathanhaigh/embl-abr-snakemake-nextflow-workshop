@@ -14,8 +14,8 @@ Table of Contents
   - [Workshop Modules](#workshop-modules)
   - [Workshops](#workshops)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
+- [Workflow Prerequisites](#workflow-prerequisites)
 - [General Workflows](#general-workflows)
-  - [Prerequisites](#prerequisites)
   - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
   - [Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-2-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
   - [Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
@@ -87,18 +87,8 @@ or [permission levels for an organisation repository](https://help.github.com/ar
 This provides a convienient way of controlling how changes are vetted before being included into a
 module or workshop. Choose wisely which users you give this power to.
 
-General Workflows
-=================
-The following workflows are to provide guidence on how to achieve particular tasks; from updating
-a workshop module to writing your own workshop modules from scratch. There are some software
-prerequisits for following the examples under each workflow.
-
-We assume you are working on a Linux OS and have command line experience, or at least you're not
-scared by it! The commands provided in these workflows have been written in bash for a 64-bit
-Ubuntu OS but should work on other Linux flavours with little modification.
-
-Prerequisites
--------------
+Workflow Prerequisites
+======================
 To follow along with the exampples in the workflows, you'll need to install some software first.
 Here is a list of software prerequisites:
 
@@ -128,6 +118,16 @@ tar xzf "hub-linux-amd64-${HUB_VERSION}.tar.gz"
 # Copy the binary onto the path
 sudo cp "hub-linux-amd64-${HUB_VERSION}/hub" /usr/local/bin/
 ```
+
+General Workflows
+=================
+The following workflows are to provide guidence on how to achieve particular tasks; from updating
+a workshop module to writing your own workshop modules from scratch. There are some software
+prerequisits for following the examples under each workflow.
+
+We assume you are working on a Linux OS and have command line experience, or at least you're not
+scared by it! The commands provided in these workflows have been written in bash for a 64-bit
+Ubuntu OS but should work on other Linux flavours with little modification.
 
 Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning
 -----------------------------------------------------------------------
