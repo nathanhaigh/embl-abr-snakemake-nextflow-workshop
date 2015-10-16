@@ -20,15 +20,14 @@ Table of Contents
   - [Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-2-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
   - [Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
   - [Workflow 4: Making Changes to an Existing BTP Module or Workshop](#workflow-4-making-changes-to-an-existing-btp-module-or-workshop)
+      - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
+      - [Updating a Module](#updating-a-module)
+      - [Updating a Workshop](#updating-a-workshop) 
   - [Workflow 5: Developing Your Own BTP Module](#workflow-5-developing-your-own-btp-module)
     - [Specifying Datasets Required for Your Module](#specifying-datasets-required-for-your-module)
     - [Specifying Tools Required for Your Module](#specifying-toolsirequired-for-your-module)
     - [Writing Your Handout Exercises](#writing-your-handout-exercises)
   - [Workflow 6: Developing Your Own BTP Workshop From Scratch](#workflow-6-developing-your-own-btp-workshop-from-scratch)
-- [Maintaining Workshop/Module Repositories](#maintaining-workshop_module_repositories)
-  - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
-  - [Updating a Module](#updating-a-module)
-  - [Updating a Workshop](#updating-a-workshop)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
   - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
   - [Customise the Handout Styling](#customise-the-handout-styling)
@@ -252,52 +251,9 @@ git push
 
 Workflow 4: Making Changes to an Existing BTP Module or Workshop
 ----------------------------------------------------------------
-TODO
 
-Workflow 5: Developing Your Own BTP Module
-------------------------------------------
-This is where you will spend most of your time in developing content for use in workshops. To be able to
-effectively develop new content, you will need to become familiar with the way BTP modules are structured
-and how they interface with a BTP workshop repository. All these details are provided in a template repository
-([btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)) which contains detailed
-information about the strucure of a BTP module, inline help and examples.
+### Fork and Pull Collaborative Model
 
-This workflow helps you to find information on how to specify what tools and data are needed for trainees
-to follow along with your handout excersies and how to write your handout document using LaTeX. You will
-then be able to follow [Workflow 3](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
-for information on how to use/include your newly created BTP module as part of a workshop.
-
-### Specifying Datasets Required for Your Module
-
-You will need to create a `datasets/data.yaml` file in your workshop module. In this file, you need to
-specify the public URL from which the dataset will be obtained. Other information specified in this YAML file
-pertain to where the data set should reside on the training platform (this should match what you write in your
-handout exercises), who should own the file(s) etc.
-
-More specific information can be found in the [`btp-module-template/datasets/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)
-
-### Specifying Tools Required for Your Module
-
-You will need to create a `tools/tools.yaml` file in your workshop module. In this file, you need to
-specify the public URL of a shell script to be used to install each of the required tools. "Providers" other than `shell` can be specified. For instance, if the tool has a Debian package, you can provide a link to the `.deb` file
-and specify the `provider` as `dpkg`.
-
-More specific information can be found in the [`btp-module-template/tools/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tools/README.md)
-
-### Writing Your Handout Exercises
-
-TODO
-
-Workflow 6: Developing Your Own BTP Workshop From Scratch
-=========================================================
-
-TODO
-
-Maintaining Workshop/Module Repositories
-========================================
-
-Fork and Pull Collaborative Model
----------------------------------
 We will assume that you are using a [fork & pull collaborative model](https://help.github.com/articles/using-pull-requests/#fork--pull)
 to getting updates included into a workshop or workshop module. This means that the master
 repository of a workshop or module has limited GitHub users which have write access and can thus
@@ -313,7 +269,7 @@ or [permission levels for an organisation repository](https://help.github.com/ar
 This provides a convienient way of controlling how changes are vetted before being included into a
 module or workshop. Choose wisely which users you give this power to!
 
-## Updating a Module
+### Updating a Module
 
 To demonstrate this workflow we will use the [btp-module-ngs-qc](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc)
 repository as the example.
@@ -363,7 +319,7 @@ To have an existing workshop repository utilise these updates you will need to u
 repository's git submodules. This is detailed in the [Updating a Workshop](#updating-a-workshop)
 section.
 
-## Updating a Workshop
+### Updating a Workshop
 
 A workshop is comprised of 1 or more modules which are included in the repository as git submodules.
 A submodule always points to a particular revision of the module repository; usually the revision
@@ -412,6 +368,45 @@ git push
 # Issue a pull request to request your changes be included into the module repository
 hub pull-request -m "Updated all submodules to their latest revisions"
 ```
+
+Workflow 5: Developing Your Own BTP Module
+------------------------------------------
+This is where you will spend most of your time in developing content for use in workshops. To be able to
+effectively develop new content, you will need to become familiar with the way BTP modules are structured
+and how they interface with a BTP workshop repository. All these details are provided in a template repository
+([btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)) which contains detailed
+information about the strucure of a BTP module, inline help and examples.
+
+This workflow helps you to find information on how to specify what tools and data are needed for trainees
+to follow along with your handout excersies and how to write your handout document using LaTeX. You will
+then be able to follow [Workflow 3](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
+for information on how to use/include your newly created BTP module as part of a workshop.
+
+### Specifying Datasets Required for Your Module
+
+You will need to create a `datasets/data.yaml` file in your workshop module. In this file, you need to
+specify the public URL from which the dataset will be obtained. Other information specified in this YAML file
+pertain to where the data set should reside on the training platform (this should match what you write in your
+handout exercises), who should own the file(s) etc.
+
+More specific information can be found in the [`btp-module-template/datasets/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)
+
+### Specifying Tools Required for Your Module
+
+You will need to create a `tools/tools.yaml` file in your workshop module. In this file, you need to
+specify the public URL of a shell script to be used to install each of the required tools. "Providers" other than `shell` can be specified. For instance, if the tool has a Debian package, you can provide a link to the `.deb` file
+and specify the `provider` as `dpkg`.
+
+More specific information can be found in the [`btp-module-template/tools/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tools/README.md)
+
+### Writing Your Handout Exercises
+
+TODO
+
+Workflow 6: Developing Your Own BTP Workshop From Scratch
+=========================================================
+
+TODO
 
 Advanced Workshop Customisations
 ================================
