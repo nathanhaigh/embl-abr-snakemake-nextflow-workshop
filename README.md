@@ -1,15 +1,16 @@
 This repository provides a minimalistic base template for creating a hands-on workshop
-following the framework set out in the Bioinformatics Training Platform (BTP). Below we have
-provided various entry-points, by way of workflows, to demonstrate the various ways in which you
-can utilise existing workshops and workshop modules. We also provide information on how to go about
-developing your own modules and workshops.
+following the framework set out in the Bioinformatics Training Platform (BTP). It provides
+the "glue" to make life easier for the workshop content developer. Below we have
+provided various entry-points, by way of workflows. These demonstrate the various ways in which you
+can reuse existing workshops and workshop modules as well how to go about developing your own
+modules and workshops.
 
 Table of Contents
 =================
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-- [Basic BTP Concepts](#basic-btp-concepts)
+- [BTP Components](#btp-components)
   - [Workshop Modules](#workshop-modules)
   - [Workshops](#workshops)
   - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
@@ -31,10 +32,20 @@ Table of Contents
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-Basic BTP Concepts
-==================
+BTP Components
+==============
 In order to help create a more reusable, plug-and-play like system for developing workshops we have
-a few key concepts which should be understood in order to get the most out of the BTP system.
+developed two key components, [workshop modules](#workshop-modules) and [workshops](#workshops). We
+maintain each in their own git repository so as to allow them to be reused and repurposed more easily.
+
+We provide convienient template repositories for both a [module
+repository](https://github.com/BPA-CSIRO-Workshops/btp-module-template) as well as this
+[workshop repository](https://github.com/BPA-CSIRO-Workshops/btp-workshop-template). Typically, you
+will only need to be familiar with these template repositories if you are planning to develop your
+own workshop ([Workflow 3](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)) or
+your own workshop module ([Workflow 5](#workflow-5-developing-your-own-btp-module)).
+
+which should be understood in order to get the most out of the BTP system.
 
 Workshop Modules
 ----------------
@@ -46,19 +57,18 @@ concepts covered in the module as well as metadata describing the data and tools
 module excercies.
 
 If you are looking to develop your own workshop content within the BTP framework then most of the work
-is done at the module level in a module repository. A workshop (see below) repository simply acts as a
-kind of glue to bring 1 or more BTP modules together.
+is done at the module level in a module repository.
 
 Workshops
 ---------
-Workshop repositories pull together 1 or more workshop modules and provide the necessary files to
-glue them together into a single coherent workshop. There are two types of workshops repositores:
+Workshop repositories pull together 1 or more workshop modules (as git `submodules`) and provide
+the necessary files to "glue" them together into a single coherent workshop. We make use of two
+types of workshops repositores:
 
-  1. An almost static workshop repository which captures the workshop which was run at a particular
-  location on a paticular date. Think of this as a snapshot of a workshop which was run and maintained
-  for posterity.
-  2. A master workshop template which is updated and maintained over time. Think of this as a
-  template from which the above static workshop repository is created.
+  1. A master workshop repository. This is the workshop which is updated and maintained over time
+     and is cloned whenever a trainer runs the workshop at a specific location on a particular date.
+  2. A static, workshop repository, cloned from the above master workshop repository. It provides a
+     convienient way to capture the state of a workshop at the time it was run. 
 
 Fork and Pull Collaborative Model
 ---------------------------------
@@ -241,20 +251,6 @@ git remote set-url origin git@github.com:<USER>/${WORKSHOP_NAME}.git
 git push
 ```
 
-Developing Your Own BTP Modules
--------------------------------
-Head over to the [btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)
-repository. It contains all the information and example info on how to put together your own
-workshop module including:
-
-  1. How to setup the directory structure of the repository
-  2. How to write your handout content using LaTeX and our style file for achieving a consistent
-  document styling
-
-In the [example.tex](https://github.com/BPA-CSIRO-Workshops/btp-module-template/blob/master/handout/example.tex)
-file You'll find lots of useful info and links to online resources to help you on your way with
-writing LaTeX.
-
 Workflow 4: Making Changes to an Existing BTP Module or Workshop
 ----------------------------------------------------------------
 TODO
@@ -270,6 +266,20 @@ information about the strucure of a BTP module, inline help and examples.
 For the remaining of this workflow,we assume you are familiar with the BTP module design/structure.
 
 TODO: Add info of what to do, what to modify etc.
+
+Developing Your Own BTP Modules
+-------------------------------
+Head over to the [btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)
+repository. It contains all the information and example info on how to put together your own
+workshop module including:
+
+  1. How to setup the directory structure of the repository
+  2. How to write your handout content using LaTeX and our style file for achieving a consistent
+  document styling
+
+In the [example.tex](https://github.com/BPA-CSIRO-Workshops/btp-module-template/blob/master/handout/example.tex)
+file You'll find lots of useful info and links to online resources to help you on your way with
+writing LaTeX.
 
 Updating an Existing Workshop
 -----------------------------
