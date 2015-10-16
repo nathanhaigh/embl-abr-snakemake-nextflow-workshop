@@ -83,6 +83,36 @@ What This Template Provides
   * Template files for creating a trainer information page and workshop preamble page in the exercise handout document
   * LaTeX style files for consistent rendering of the exercise handout across all your workshops.
 
+How The Makefile Works
+----------------------
+
+The `Makefile` provides several convienient targets for installing a TeX-Live environment, to building both a trainer as well as a trainee version of the workshop exercise handout document.
+
+Installing a minimal TeX-Live environment is as simple as:
+
+```bash
+make tex_env
+```
+
+We can build the trainer's version of the handout:
+
+```bash
+make trainer_handout.pdf
+```
+
+We can build the trainee's version of the handout:
+
+```bash
+make trainee_handout.pdf
+```
+
+For the handout building to work as expected, there are some simple rules to follow:
+
+  * The order in which modules appear in the handout is dictated by the numerical prefix of the
+    module's directory name. That means, when you add a workshop module using git `submodules`, use a relevant
+    numerical prefix for the submodule name.
+  * The LaTeX file containing a module's handhout exercises should be directly under the `handout` directory of the corresponding workshop module repository.
+
 Workflow Prerequisites
 ======================
 To follow along with the examples in the workflows, you'll need to install some software first.
