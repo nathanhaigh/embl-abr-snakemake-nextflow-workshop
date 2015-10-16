@@ -13,6 +13,7 @@ Table of Contents
 - [BTP Components](#btp-components)
   - [Workshop Modules](#workshop-modules)
   - [Workshops](#workshops)
+- [What This Template Provides](#what-this-template-provides)
 - [Workflow Prerequisites](#workflow-prerequisites)
 - [General Workflows](#general-workflows)
   - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
@@ -73,6 +74,15 @@ types of workshops repositores:
      and is cloned whenever a trainer runs the workshop at a specific location on a particular date.
   2. A static, workshop repository, cloned from the above master workshop repository. It provides a
      convienient way to capture the state of a workshop at the time it was run. 
+
+What This Template Provides
+===========================
+
+  * A barebones [`template.txt`](https://github.com/BPA-CSIRO-Workshops/btp-workshop-template/blob/master/template.tex) LaTeX file which provides the workshop-level information for the exercise handout. For instance, you can change the workshop title, venue, date and authors by some simple modifications of this file.
+  * A `Makefile` which is used to build the workshop exercise handout document from all the component module LaTeX files.
+  * Scripts for setting up a minimal TeX-Live installation capable of compiling the exercise handout from the LaTeX source.
+  * Template files for creating a trainer information page and workshop preamble page in the exercise handout document
+  * LaTeX style files for consistent rendering of the exercise handout across all your workshops.
 
 Workflow Prerequisites
 ======================
