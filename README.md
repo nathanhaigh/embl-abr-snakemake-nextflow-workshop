@@ -163,15 +163,14 @@ BTP workshops head over to: https://github.com/BPA-CSIRO-Workshops?query=btp-wor
   ```
 
   2. You should now customise the repository to reflect your workshop-specific details.
-    1. `README.md` - Travis and zenodo badges, workshop info content
-    2. `template.tex` - Modify `\setWorkshopTitle`, `\setWorkshopVenue`, `\setWorkshopDate` and
-    `\setWorkshopAuthor` to reflext the specific of your workshop. These will be placed into the
+    1. Modify `template.tex`. Change `\setWorkshopTitle`, `\setWorkshopVenue`, `\setWorkshopDate` and
+    `\setWorkshopAuthor` to reflect the specifics of your workshop. These will be placed into the
     handout.
-    3. `010_trainers/` - Delete unnecessary trainer photos from `010_trainers/photos/` and add
+    2. Modify `010_trainers/` contents. Delete unnecessary trainer photos from `010_trainers/photos/` and add
     photos of your own trainers instead. Modify `010_trainers/trainers.tex` to contain only yor own
     trainers and use the photos you placed into `010_trainers/photos/` or used the
     `010_trainers/generic.jpg` image for camera-shy trainers.
-  3. Build your trainee and trainer handout PDFs.
+  3. Build your trainee and trainer handout PDFs:
 
 ```bash
 # Perform a 1-time install of a minimal tex-live so you have everything you need to build the PDFs
