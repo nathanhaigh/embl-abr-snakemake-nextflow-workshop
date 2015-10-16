@@ -329,8 +329,9 @@ touch test
 git add test
 git commit -m "Added test file"
 
-# Push it up to your repository on GitHub - replace <USER> with your own GitHub username
-git push --set-upstream <USER> master
+# Push it up to your repository on GitHub - replace GITHUB_USER with your own GitHub username
+GITHUB_USER='my_github_username'
+git push --set-upstream ${GITHUB_USER} master
 
 # Subsequent pushes will only need a "git push"
 touch test2
@@ -385,8 +386,9 @@ cd ../
 git add 050_ngs-qc
 git commit -m "Updated QC submodule to latest revision"
 
-# Push it up to your repository on GitHub - replace <USER> with your own GitHub username
-git push --set-upstream <USER> master
+# Push it up to your repository on GitHub - replace GITHUB_USER with your own GitHub username
+GITHUB_USER='my_github_username'
+git push --set-upstream ${GITHUB_USER} master
 
 # Update all submodules so they all point to the latest revisions in their
 # respective repositories
