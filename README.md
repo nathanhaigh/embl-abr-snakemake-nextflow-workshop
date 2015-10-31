@@ -473,7 +473,14 @@ GitHub help page.
 
 Customise the Handout Styling
 -----------------------------
-TODO
+There are several aspects of the theme which can be customised, some of which are straightforward
+and some of which require in-depth knowledge of LaTeX macros and commands. The simplest aspects to
+change are the icons placed in the left margin next to each of the paragraph text environments.
+Simply clone the `btp-handout-style` repository, replace the relevant icon files in the `./icons`
+directory and replace any existing style submodules, in your workshop repositories, with a link to
+your cloned `style` repository. To change other aspects such as background colours of paragraph text
+environments you need more in depth knowledge of LaTeX macros and commands. This requires that the
+`btp.sty` style file be edited directly.
 
 Use Travis-CI to automate PDF Building
 --------------------------------------
