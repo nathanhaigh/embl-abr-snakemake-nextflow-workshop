@@ -310,6 +310,8 @@ to getting updates included into a workshop or workshop module. This means that 
 repository of a workshop or module has limited GitHub users which have write access and can thus
 OK changes into a particular repository.
 
+<img src="http://s20.postimg.org/gxjlr56r1/Figure_4.png" width="400">
+
 To modify who has write access to your GitHub repository, head over to the repository's
 Settings >> Collaborators page. Whether the repository is under your personal space or an
 organisation will determine exactly how youmake these changes. For full details of both
