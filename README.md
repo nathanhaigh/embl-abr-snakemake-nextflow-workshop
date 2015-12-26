@@ -174,7 +174,7 @@ of the following steps:
   4. Issue a Packer build process
   5. Boot a new VirtualBox virtual machine using the image file just created
 
-<img align="center" src="http://s24.postimg.org/e2ssu7b05/Figure_2.png" width="400">
+<img align="center" src="http://postimg.org/image/me29lj04p/" width="400">
 
 Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop
 ---------------------------------------------------------------------
