@@ -176,7 +176,7 @@ of the following steps:
   4. Issue a Packer build process
   5. Boot a new VirtualBox virtual machine using the image file just created
 
-<img src="http://s20.postimg.org/pxo7bc2ul/Figure_2.png" width="400">
+<img src="http://s20.postimg.org/pxo7bc2ul/Figure_2.png" width="600">
 
 Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop
 ---------------------------------------------------------------------
@@ -188,7 +188,7 @@ For the purpose of this example workflow we are going to use the [btp-workshop-n
 (https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs) repository. To see a list of available
 BTP workshops head over to: https://github.com/BPA-CSIRO-Workshops?query=btp-workshop-
 
-<img src="http://s20.postimg.org/b83d6u0kt/Figure_3.png">
+<img src="http://s20.postimg.org/b83d6u0kt/Figure_3.png" width="600">
 
   1. Clone the [btp-workshop-ngs](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs)
   repository into a new repository on GitHub. We'll create a repository under our username called
