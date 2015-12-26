@@ -461,6 +461,8 @@ Workflow 6: Developing Your Own BTP Workshop From Scratch
 
 TODO
 
+<img src="http://s20.postimg.org/nj0x4nbzh/Figure_6.png" width="600">
+
 Advanced Workshop Customisations
 ================================
 Once you've got the hang of making basic modifications of existing workshops, you'll find there are
