@@ -188,6 +188,8 @@ For the purpose of this example workflow we are going to use the [btp-workshop-n
 (https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs) repository. To see a list of available
 BTP workshops head over to: https://github.com/BPA-CSIRO-Workshops?query=btp-workshop-
 
+<img src="http://s20.postimg.org/b83d6u0kt/Figure_3.png">
+
   1. Clone the [btp-workshop-ngs](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs)
   repository into a new repository on GitHub. We'll create a repository under our username called
   `ngs-workshop_SYD-2015-05` so we know exactly to which workshop the repository pertains. The idea
