@@ -157,7 +157,22 @@ Ubuntu OS but should work on other Linux flavours with little modification.
 
 Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning
 -----------------------------------------------------------------------
-TODO
+A self-directed learner might like to work through the contents of an existing BTP workshop in their
+own time and at their own pace.
+
+Ready to roll VirtualBox and VMWare images have been create for the following BTP workshop repositories:
+
+  1. **Intro to NGS** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
+  2. **Another Workshop** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
+
+These virtual machine image files were created using a process detailed in Revote *et al.* and consists
+of the following steps:
+
+  1. Install Packer (https://www.packer.io/)
+  2. Install VirtualBox (https://www.virtualbox.org/)
+  3. Clone the required BTP Workshop repository from GitHub
+  4. Issue a Packer build process
+  5. Boot a new VirtualBox virtual machine using the image file just created
 
 Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop
 ---------------------------------------------------------------------
