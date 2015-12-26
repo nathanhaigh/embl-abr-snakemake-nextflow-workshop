@@ -51,6 +51,8 @@ your own workshop module ([Workflow 5](#workflow-5-developing-your-own-btp-modul
 
 which should be understood in order to get the most out of the BTP system.
 
+<img src="http://s20.postimg.org/aeqre7ujx/Figure_1.png" width=400>
+
 Workshop Modules
 ----------------
 A workshop module is a major, self-contained component of a hands-on workshop. It can be reused,
@@ -174,7 +176,7 @@ of the following steps:
   4. Issue a Packer build process
   5. Boot a new VirtualBox virtual machine using the image file just created
 
-<img align="middle" src="http://s20.postimg.org/pxo7bc2ul/Figure_2.png" width="400">
+<img src="http://s20.postimg.org/pxo7bc2ul/Figure_2.png" width="400">
 
 Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop
 ---------------------------------------------------------------------
