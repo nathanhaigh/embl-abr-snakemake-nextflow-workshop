@@ -18,16 +18,15 @@ Table of Contents
 - [General Workflows](#general-workflows)
   - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
   - [Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-2-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
-  - [Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop](#workflow-3-using-existing-btp-modules-to-develop-your-own-workshop)
-  - [Workflow 4: Making Changes to an Existing BTP Module or Workshop](#workflow-4-making-changes-to-an-existing-btp-module-or-workshop)
+  - [Workflow 3: Updating BTP Modules and Workshops](#workflow-3-updating-btp-modules-and-workshops)
+  - [Workflow 4: Developing Your Own BTP Module](#workflow-4-developing-your-own-btp-module)
       - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
       - [Updating a Module](#updating-a-module)
       - [Updating a Workshop](#updating-a-workshop) 
-  - [Workflow 5: Developing Your Own BTP Module](#workflow-5-developing-your-own-btp-module)
+  - [Workflow 5: Developing Your Own BTP Workshop](#workflow-5-developing-your-own-btp-workshop)
     - [Specifying Datasets Required for Your Module](#specifying-datasets-required-for-your-module)
     - [Specifying Tools Required for Your Module](#specifying-toolsirequired-for-your-module)
     - [Writing Your Handout Exercises](#writing-your-handout-exercises)
-  - [Workflow 6: Developing Your Own BTP Workshop From Scratch](#workflow-6-developing-your-own-btp-workshop-from-scratch)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
   - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
   - [Customise the Handout Styling](#customise-the-handout-styling)
@@ -228,8 +227,8 @@ cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
 PATH=/usr/local/texlive/bin/x86_64-linux:$PATH make
 ```
 
-Workflow 3: Using Existing BTP Modules to Develop Your Own Workshop
--------------------------------------------------------------------
+Workflow 3: Updating BTP Modules and Workshops
+----------------------------------------------
 You would like to create your own workshop by mixing-and-matching [existing BTP workshop modules](https://github.com/BPA-CSIRO-Workshops?query=btp-module-). We'll set up a master workshop
 repository for this workshop, as we expect it will be in high demand, and show you how to clone it to
 generate a statict workshop-specific repository for each of the workshops you run.
@@ -300,8 +299,8 @@ git remote set-url origin git@github.com:${GITHUB_USER}/${WORKSHOP_NAME}.git
 git push
 ```
 
-Workflow 4: Making Changes to an Existing BTP Module or Workshop
-----------------------------------------------------------------
+Workflow 4: Developing Your Own BTP Module
+------------------------------------------
 
 ### Fork and Pull Collaborative Model
 
@@ -422,13 +421,15 @@ git push
 hub pull-request -m "Updated all submodules to their latest revisions"
 ```
 
-Workflow 5: Developing Your Own BTP Module
-------------------------------------------
+Workflow 5: Developing Your Own BTP Workshop
+--------------------------------------------
 This is where you will spend most of your time in developing content for use in workshops. To be able to
 effectively develop new content, you will need to become familiar with the way BTP modules are structured
 and how they interface with a BTP workshop repository. All these details are provided in a template repository
 ([btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)) which contains detailed
 information about the strucure of a BTP module, inline help and examples.
+
+<img src="http://s20.postimg.org/nj0x4nbzh/Figure_6.png" width="600">
 
 This workflow helps you to find information on how to specify what tools and data are needed for trainees
 to follow along with your handout excersies and how to write your handout document using LaTeX. You will
@@ -455,13 +456,6 @@ More specific information can be found in the [`btp-module-template/tools/README
 ### Writing Your Handout Exercises
 
 TODO
-
-Workflow 6: Developing Your Own BTP Workshop From Scratch
-=========================================================
-
-TODO
-
-<img src="http://s20.postimg.org/nj0x4nbzh/Figure_6.png" width="600">
 
 Advanced Workshop Customisations
 ================================
