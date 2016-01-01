@@ -24,7 +24,7 @@ Table of Contents
       - [Updating a Workshop](#updating-a-workshop) 
   - [Workflow 4: Developing Your Own BTP Workshop](#workflow-4-developing-your-own-btp-workshop)
     - [Specifying Datasets Required for Your Module](#specifying-datasets-required-for-your-module)
-    - [Specifying Tools Required for Your Module](#specifying-toolsirequired-for-your-module)
+    - [Specifying Tools Required for Your Module](#specifying-tools-required-for-your-module)
     - [Writing Your Handout Exercises](#writing-your-handout-exercises)
   - [Workflow 5: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-5-reusing-an-existing-btp-workshop-for-self-directed-learning)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
@@ -441,17 +441,16 @@ Workflow 5: Reusing an Existing BTP Workshop for Self-Directed Learning
 A self-directed learner might like to work through the contents of an existing BTP workshop in their
 own time and at their own pace.
 
-Ready to roll VirtualBox and VMWare images have been create for the following BTP workshop repositories:
+Ready to roll VirtualBox images have been create for the following BTP workshop repositories:
 
-  1. **Intro to NGS** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
-  2. **Another Workshop** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
+  1. [Intro to NGS](https://github.com/BPA-CSIRO-Workshops/btp-workshop-ngs/releases)
 
-These virtual machine image files were created using a process detailed in Revote *et al.* and consists
+The virtual machine image files were created using a process detailed in Revote *et al.* and consists
 of the following steps:
 
-  1. Install Packer (https://www.packer.io/)
-  2. Install VirtualBox (https://www.virtualbox.org/)
-  3. Clone the required BTP Workshop repository from GitHub
+  1. Install [Packer](https://www.packer.io/)
+  2. Install [VirtualBox](https://www.virtualbox.org/)
+  3. Clone the required BTP Workshop repository from GitHub (e.g. https://github.com/BPA-CSIRO-Workshops?query=btp-workshop-)
   4. Issue a Packer build process
   5. Boot a new VirtualBox virtual machine using the image file just created
 
