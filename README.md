@@ -16,17 +16,17 @@ Table of Contents
 - [What This Template Provides](#what-this-template-provides)
 - [Workflow Prerequisites](#workflow-prerequisites)
 - [General Workflows](#general-workflows)
-  - [Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-1-reusing-an-existing-btp-workshop-for-self-directed-learning)
-  - [Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-2-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
-  - [Workflow 3: Updating BTP Modules and Workshops](#workflow-3-updating-btp-modules-and-workshops)
-  - [Workflow 4: Developing Your Own BTP Module](#workflow-4-developing-your-own-btp-module)
+  - [Workflow 1: Reusing an Existing BTP Workshop to Run Your Own Workshop](#workflow-1-reusing-an-existing-btp-workshop-to-run-your-own-workshop)
+  - [Workflow 2: Updating BTP Modules and Workshops](#workflow-2-updating-btp-modules-and-workshops)
+  - [Workflow 3: Developing Your Own BTP Module](#workflow-3-developing-your-own-btp-module)
       - [Fork and Pull Collaborative Model](#fork-and-pull-collaborative-model)
       - [Updating a Module](#updating-a-module)
       - [Updating a Workshop](#updating-a-workshop) 
-  - [Workflow 5: Developing Your Own BTP Workshop](#workflow-5-developing-your-own-btp-workshop)
+  - [Workflow 4: Developing Your Own BTP Workshop](#workflow-4-developing-your-own-btp-workshop)
     - [Specifying Datasets Required for Your Module](#specifying-datasets-required-for-your-module)
     - [Specifying Tools Required for Your Module](#specifying-toolsirequired-for-your-module)
     - [Writing Your Handout Exercises](#writing-your-handout-exercises)
+  - [Workflow 5: Reusing an Existing BTP Workshop for Self-Directed Learning](#workflow-5-reusing-an-existing-btp-workshop-for-self-directed-learning)
 - [Advanced Workshop Customisations](#advanced-workshop-customisations)
   - [Minting a DOI for your Workshop](#minting-a-doi-for-your-workshop)
   - [Customise the Handout Styling](#customise-the-handout-styling)
@@ -156,28 +156,7 @@ We assume you are working on a Linux OS and have command line experience, or at 
 scared by it! The commands provided in these workflows have been written in bash for a 64-bit
 Ubuntu OS but should work on other Linux flavours with little modification.
 
-Workflow 1: Reusing an Existing BTP Workshop for Self-Directed Learning
------------------------------------------------------------------------
-A self-directed learner might like to work through the contents of an existing BTP workshop in their
-own time and at their own pace.
-
-Ready to roll VirtualBox and VMWare images have been create for the following BTP workshop repositories:
-
-  1. **Intro to NGS** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
-  2. **Another Workshop** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
-
-These virtual machine image files were created using a process detailed in Revote *et al.* and consists
-of the following steps:
-
-  1. Install Packer (https://www.packer.io/)
-  2. Install VirtualBox (https://www.virtualbox.org/)
-  3. Clone the required BTP Workshop repository from GitHub
-  4. Issue a Packer build process
-  5. Boot a new VirtualBox virtual machine using the image file just created
-
-<img src="http://s20.postimg.org/pxo7bc2ul/Figure_2.png" width="600">
-
-Workflow 2: Reusing an Existing BTP Workshop to Run Your Own Workshop
+Workflow 1: Reusing an Existing BTP Workshop to Run Your Own Workshop
 ---------------------------------------------------------------------
 The easiest way to get started is to use an existing Bioinformatics Training Platform (BTP)
 workshop. These workshops are like a master template for a given workshop; they are cloned
@@ -227,7 +206,7 @@ cd ./developers/ && sudo -E ./texlive_install.sh && cd ../
 PATH=/usr/local/texlive/bin/x86_64-linux:$PATH make
 ```
 
-Workflow 3: Updating BTP Modules and Workshops
+Workflow 2: Updating BTP Modules and Workshops
 ----------------------------------------------
 You would like to create your own workshop by mixing-and-matching [existing BTP workshop modules](https://github.com/BPA-CSIRO-Workshops?query=btp-module-). We'll set up a master workshop
 repository for this workshop, as we expect it will be in high demand, and show you how to clone it to
@@ -299,7 +278,7 @@ git remote set-url origin git@github.com:${GITHUB_USER}/${WORKSHOP_NAME}.git
 git push
 ```
 
-Workflow 4: Developing Your Own BTP Module
+Workflow 3: Developing Your Own BTP Module
 ------------------------------------------
 
 ### Fork and Pull Collaborative Model
@@ -421,7 +400,7 @@ git push
 hub pull-request -m "Updated all submodules to their latest revisions"
 ```
 
-Workflow 5: Developing Your Own BTP Workshop
+Workflow 4: Developing Your Own BTP Workshop
 --------------------------------------------
 This is where you will spend most of your time in developing content for use in workshops. To be able to
 effectively develop new content, you will need to become familiar with the way BTP modules are structured
@@ -456,6 +435,27 @@ More specific information can be found in the [`btp-module-template/tools/README
 ### Writing Your Handout Exercises
 
 TODO
+
+Workflow 5: Reusing an Existing BTP Workshop for Self-Directed Learning
+-----------------------------------------------------------------------
+A self-directed learner might like to work through the contents of an existing BTP workshop in their
+own time and at their own pace.
+
+Ready to roll VirtualBox and VMWare images have been create for the following BTP workshop repositories:
+
+  1. **Intro to NGS** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
+  2. **Another Workshop** VM Images: [VirtualBox](http://example.com) | [VMWare](http://example.com)
+
+These virtual machine image files were created using a process detailed in Revote *et al.* and consists
+of the following steps:
+
+  1. Install Packer (https://www.packer.io/)
+  2. Install VirtualBox (https://www.virtualbox.org/)
+  3. Clone the required BTP Workshop repository from GitHub
+  4. Issue a Packer build process
+  5. Boot a new VirtualBox virtual machine using the image file just created
+
+<img src="http://s20.postimg.org/pxo7bc2ul/Figure_2.png" width="600">
 
 Advanced Workshop Customisations
 ================================
