@@ -335,8 +335,6 @@ and how they interface with a BTP workshop repository. All these details are pro
 ([btp-module-template](https://github.com/BPA-CSIRO-Workshops/btp-module-template)) which contains detailed
 information about the strucure of a BTP module, inline help and examples.
 
-<img src="http://s20.postimg.org/nj0x4nbzh/Figure_6.png" width="600">
-
 This workflow helps you to find information on how to specify what tools and data are needed for trainees
 to follow along with your handout excersies and how to write your handout document using LaTeX. You will
 then be able to follow [Workflow 4](#workflow-4-developing-your-own-btp-workshop)
@@ -378,6 +376,8 @@ Workflow 4: Developing Your Own BTP Workshop
 You would like to create your own workshop by mixing-and-matching [existing BTP workshop modules](https://github.com/BPA-CSIRO-Workshops?query=btp-module-). We'll set up a master workshop
 repository for this workshop, as we expect it will be in high demand, and show you how to clone it to
 generate a statict workshop-specific repository for each of the workshops you run.
+
+<img src="http://s20.postimg.org/nj0x4nbzh/Figure_6.png" width="600">
 
 For this workflow, we will be creating an "Introduction to RNA-Seq" workshop, comprising an [NGS QC
 module](https://github.com/BPA-CSIRO-Workshops/btp-module-ngs-qc) and an [RNA-Seq
