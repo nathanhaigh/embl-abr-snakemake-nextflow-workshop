@@ -354,7 +354,7 @@ and specify the `provider` as `dpkg`. We maintain a central repository
 ([`btp-tools`](https://github.com/BPA-CSIRO-Workshops/btp-tools)) of scripts for all the tools currently used by our BTP
 modules, which module developers can use.
 
-More specific information can be found in the [`btp-module-template/tools/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tools/README.md)
+More specific information can be found in the [`btp-module-template/tools/`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tree/master/tools/)
 
 ### Specifying the Datasets
 
@@ -363,11 +363,11 @@ specify the public URL from which the dataset will be obtained. Other informatio
 pertain to where the data set should reside on the training platform (this should match what you write in your
 handout exercises), who should own the file(s) etc.
 
-More specific information can be found in the [`btp-module-template/datasets/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)
+More specific information can be found in the [`btp-module-template/datasets/`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tree/master/datasets/)
 
 ### Writing Tutorial Exercises
 
-More specific information can be found in the [`btp-module-template/datasets/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)
+More specific information can be found in the [`btp-module-template/handout/`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/tree/master/handout)
 
 
 Workflow 4: Developing Your Own BTP Workshop
