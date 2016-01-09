@@ -367,7 +367,7 @@ More specific information can be found in the [`btp-module-template/datasets/REA
 
 ### Writing Tutorial Exercises
 
-TODO
+More specific information can be found in the [`btp-module-template/datasets/README.md`](https://github.com/BPA-CSIRO-Workshops/btp-module-template/datasets/README.md)
 
 
 Workflow 4: Developing Your Own BTP Workshop
