@@ -1,3 +1,6 @@
 [submodule "style"]
 	path = style
 	url = https://github.com/BPA-CSIRO-Workshops/btp-handout-style.git
+[submodule "050_snakemake"]
+	path = 050_snakemake
+	url = https://github.com/nathanhaigh/btp-module-snakemake
