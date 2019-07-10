@@ -1,3 +1,6 @@
 [submodule "style"]
 	path = style
 	url = https://github.com/BPA-CSIRO-Workshops/btp-handout-style.git
+[submodule "060_nextflow"]
+	path = 060_nextflow
+	url = https://github.com/rsuchecki/btp-module-nextflow
