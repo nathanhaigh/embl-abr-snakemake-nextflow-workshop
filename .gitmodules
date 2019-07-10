@@ -1,9 +1,0 @@
-[submodule "style"]
-	path = style
-	url = https://github.com/BPA-CSIRO-Workshops/btp-handout-style.git
-[submodule "060_nextflow"]
-	path = 060_nextflow
-	url = https://github.com/rsuchecki/btp-module-nextflow
-[submodule "050_snakemake"]
-	path = 050_snakemake
-	url = https://github.com/nathanhaigh/btp-module-snakemake
