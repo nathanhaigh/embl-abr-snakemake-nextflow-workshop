@@ -2,7 +2,6 @@ env:
   global:
     - PATH: /usr/local/texlive/bin/x86_64-linux:$PATH
     - GH_REF: github.com/${TRAVIS_REPO_SLUG}.git
-    - secure: "df074b743c15acebdaf68acb42dc4e98d18dba08"
 git:
   submodules: false
 before_install:
