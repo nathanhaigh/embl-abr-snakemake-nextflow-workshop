@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/UofABioinformaticsHub/embl-abr-snakemake-nextflow-workshop.svg?branch=master)](https://travis-ci.org/UofABioinformaticsHub/embl-abr-snakemake-nextflow-workshop)
+
 This repository provides a minimalistic base template for creating a hands-on workshop
 following the framework set out in the Bioinformatics Training Platform (BTP). It provides
 the "glue" to make life easier for the workshop content developer. Below we have
