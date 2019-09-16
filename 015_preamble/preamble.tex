@@ -83,3 +83,59 @@ the document more easily:
 \hspace*{.2cm}\vcent{\includegraphics[height=1cm]{icons/bonus1.png}} Bonus exercise for fast learners\\
 \hspace*{.2cm}\vcent{\includegraphics[height=1cm]{icons/bonus2.png}} Advanced exercise for super-fast learners\\
 
+%========================
+\section{Provided Compute Infrastructure}
+%========================
+
+For the purposes of this training, we are providing you with access to a virtual cluster running on top of
+AWS. The specification of this cluster is as follows:
+
+\begin{description}[style=multiline,labelindent=0cm,align=left,leftmargin=0.5cm]
+  \item[Head Node]\hfill\\
+    \texttt{m5d.4xlarge} (16 vCPU, 64G RAM and 2x300 SSD)
+  \item[Compute Nodes]\hfill\\
+    \texttt{t2.medium}, min: 30 max: 50
+  \item[Shared Storage]\hfill\\
+    \texttt{1000G}
+\end{description}
+
+%========================
+\subsection{Connecting to the Cluster}
+%========================
+
+\begin{steps}
+First up, lets connect to the head node of the HPC cluster using \texttt{ssh}.
+
+\emph{See your local facilitator for connection details. You will have one user account per person.}
+
+Upon connecting, feel free to use \texttt{screen} or \texttt{tmux} if you are familiar with either of those tools.
+
+\end{steps}
+
+%========================
+\subsection{Monitoring Slurm Jobs}
+%========================
+
+\begin{note}
+
+You can monitor all jobs in the slurm squeue, or just your own job(s) using the slurm command \texttt{squeue}:
+
+\begin{lstlisting}
+# All jobs in the queue
+squeue
+
+# Just your own jobs
+squeue --user ${USER}
+\end{lstlisting}
+
+For convienience we have provided you with the \texttt{sq} function which produces nicer output than the default \texttt{squeue}:
+
+\begin{lstlisting}
+# All jobs in the queue
+sq
+
+# Just your own jobs
+sq --user ${USER}
+\end{lstlisting}
+
+\end{note}
